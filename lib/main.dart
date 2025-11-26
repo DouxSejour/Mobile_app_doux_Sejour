@@ -2,6 +2,7 @@ import 'package:doux_sejour/features/login/presentation/pages/login_page.dart';
 import 'package:flutter/material.dart';
 
 import 'core/di/service_locator.dart';
+import 'features/home/presentation/pages/home_page.dart';
 
 void main() {
   initDep();
@@ -13,6 +14,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: LoginPage());
+    return MaterialApp(
+      initialRoute: '/login',
+      routes: {
+        '/login': (_) => LoginPage(),
+        '/home': (_) => const HomePage(),
+      },
+    );
   }
 }

@@ -6,7 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 class LoginState {
   final bool loading;
-  final User? user;
+  final dynamic? user;
   final Failure? error;
   const LoginState({this.loading = false, this.user, this.error});
 }

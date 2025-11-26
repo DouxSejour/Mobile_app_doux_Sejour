@@ -42,7 +42,10 @@ class LoginPage extends StatelessWidget {
                       context.read<LoginBloc>().login(
                         emailCtrl.text.trim(),
                         passwordCtrl.text.trim(),
-                      );
+                      ).then((value) {
+                        // Navigate to another page or show a success message
+                        Navigator.pushReplacementNamed(context, '/home');
+                      });
                     },
                     child: const Text("Login"),
                   ),

@@ -10,7 +10,7 @@ class LoginRepositoryImpl implements LoginRepository {
   LoginRepositoryImpl(this.api);
 
   @override
-  Future<Either<Failure, User>> connexion(String email, String password) async {
+  Future<Either<Failure, dynamic>> connexion(String email, String password) async {
     try {
       final user = await api.login(email, password);
       print(user);
